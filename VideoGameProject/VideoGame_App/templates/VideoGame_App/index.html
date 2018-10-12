@@ -1,0 +1,19 @@
+{% extends "VideoGame_App/base.html" %}
+
+{% block 001 %}
+
+{% if video_game_list %}
+<ul>
+    {% for videogames in video_game_list %}
+    <li>{{ videogames.title }}</li>
+    <li>{{ videogames.genre }}</li>
+    <hr/>
+    {% endfor %}
+</ul>
+
+
+{% else %}
+<p>No polls are available.</p>
+{% endif %}
+
+{% endblock %}
